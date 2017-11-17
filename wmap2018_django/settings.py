@@ -89,10 +89,10 @@ DATABASES = {
     # }
     'default': {
         'ENGINE': 'django.contrib.gis.db.backends.postgis',
-        'NAME': '<ask me for this>',
-        'USER': '<ask me for this>',
-        'PASSWORD': '<ask me for this>',
-        'HOST': '<ask me for this>',
+        # 'NAME': '<ask me for this>',
+        # 'USER': '<ask me for this>',
+        # 'PASSWORD': '<ask me for this>',
+        # 'HOST': '<ask me for this>',
     }
 }
 
