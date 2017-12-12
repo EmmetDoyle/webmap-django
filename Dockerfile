@@ -1,6 +1,6 @@
 FROM python:3.5
 
-MAINTAINER Mark Foley
+MAINTAINER Emmet Doyle
 
 RUN apt-get -y update
 RUN apt-get -y upgrade

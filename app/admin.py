@@ -8,16 +8,5 @@ from django.contrib.auth.admin import UserAdmin
 
 # admin.site.unregister(get_user_model())
 
-class MyUserAdmin(UserAdmin):
-    readonly_fields = ('id', 'last_login', 'date_joined', 'created', 'modified', )
-    fieldsets = (
-        (None, {'fields': ('id', 'username', 'email', 'password')}),
-        ('Personal Info', {'fields': ('first_name', 'last_name')}),
-        ('Account Status', {'fields': ('is_active', 'is_staff', 'is_superuser', )}),
-        ('Dates', {'fields': ('last_login', 'date_joined', 'created', 'modified')}),
-        ('Location', {'fields': ('last_location',)}),
-    )
-
-admin.site.register(get_user_model(), MyUserAdmin)
-admin.site.register(models.FriendGroup, admin.OSMGeoAdmin)
-admin.site.register(models.UserFriendGroup, admin.OSMGeoAdmin)
+admin.site.register(models.Party, admin.OSMGeoAdmin)
+admin.site.register(models.Genre)

@@ -57,7 +57,6 @@ MIDDLEWARE = [
 ]
 
 ROOT_URLCONF = 'wmap2018_django.urls'
-AUTH_USER_MODEL = 'app.User'
 
 TEMPLATES = [
     {
@@ -89,10 +88,10 @@ DATABASES = {
     # }
     'default': {
         'ENGINE': 'django.contrib.gis.db.backends.postgis',
-        # 'NAME': '<ask me for this>',
-        # 'USER': '<ask me for this>',
-        # 'PASSWORD': '<ask me for this>',
-        # 'HOST': '<ask me for this>',
+        'NAME': 'webmapassignmentdb',
+        'USER': 'postgres',
+        'PASSWORD': 'password123',
+        'HOST': 'webmapassignment.cun5pwf1m8dq.eu-west-1.rds.amazonaws.com',
     }
 }
 
@@ -144,12 +143,12 @@ STATICFILES_DIRS = [
 
 REST_FRAMEWORK = {
     'DEFAULT_PERMISSION_CLASSES': [
-        'rest_framework.permissions.DjangoModelPermissionsOrAnonReadOnly',
+        # 'rest_framework.permissions.DjangoModelPermissionsOrAnonReadOnly',
     ],
     'DEFAULT_AUTHENTICATION_CLASSES': [
-        'rest_framework.authentication.BasicAuthentication',
-        'rest_framework.authentication.SessionAuthentication',
-        'rest_framework.authentication.TokenAuthentication',
+        # 'rest_framework.authentication.BasicAuthentication',
+        # 'rest_framework.authentication.SessionAuthentication',
+        # 'rest_framework.authentication.TokenAuthentication',
     ]
 }
 
