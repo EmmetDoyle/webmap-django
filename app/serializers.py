@@ -32,9 +32,18 @@ class UserOtherSerializer(geo_serializers.GeoFeatureModelSerializer):
     def get_url(self, obj):
         return self.context["request"].build_absolute_uri(reverse("rest:user-username", kwargs={"uid": obj.pk}))
 
+class GenreSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = models.Genre
+        fields = ('id', 'name')
+
 class PartySerializer(geo_serializers.GeoModelSerializer):
+    genre = GenreSerializer()
+
     class Meta:
         model = models.Party
         fields = ('id', 'name', 'genre', 'location')
 
         geo_field = "location"
+
+
