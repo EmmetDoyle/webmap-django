@@ -35,6 +35,6 @@ class UserOtherSerializer(geo_serializers.GeoFeatureModelSerializer):
 class PartySerializer(geo_serializers.GeoModelSerializer):
     class Meta:
         model = models.Party
-        fields = ('id', 'name', 'genre')
+        fields = ('id', 'name', 'genre', 'location')
 
         geo_field = "location"
